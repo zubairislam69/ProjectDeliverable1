@@ -87,6 +87,16 @@ public class Binary {
 
 	}
 
+	/**
+	 * Using the Bitwise Logical OR operation on two binary values.For more
+	 * information, visit <a href=
+	 * "http://www.java2s.com/example/cpp/operator/bitwise-logical-operators-and-truth-tables.html">
+	 * Bitwise Inclusive OR </a>.
+	 * 
+	 * @param value1 The first binary value
+	 * @param value2 The second binary value
+	 * @return A binary variable with a value of the result from the OR operation
+	 */
 	public static Binary bitwiseLogicalOR(Binary value1, Binary value2) {
 
 		// get length of both binary values
@@ -144,6 +154,16 @@ public class Binary {
 
 	}
 
+	/**
+	 * Using the Bitwise Logical OR operation on two binary values.For more
+	 * information, visit <a href=
+	 * "http://www.java2s.com/example/cpp/operator/bitwise-logical-operators-and-truth-tables.html">
+	 * Bitwise AND </a>.
+	 * 
+	 * @param value1 The first binary value
+	 * @param value2 The second binary value
+	 * @return A binary variable with a value of the result from the AND operation
+	 */
 	public static Binary bitwiseLogicalAND(Binary value1, Binary value2) {
 
 		// get length of both binary values
