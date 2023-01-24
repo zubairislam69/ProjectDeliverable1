@@ -155,7 +155,7 @@ public class Binary {
 	}
 
 	/**
-	 * Using the Bitwise Logical OR operation on two binary values.For more
+	 * Using the Bitwise Logical AND operation on two binary values.For more
 	 * information, visit <a href=
 	 * "http://www.java2s.com/example/cpp/operator/bitwise-logical-operators-and-truth-tables.html">
 	 * Bitwise AND </a>.
@@ -220,28 +220,29 @@ public class Binary {
 		return result;
 
 	}
-	
+
 	/**
 	 * Using Binary Multiplication for two binary values.
 	 * 
 	 * @param value1 The first binary value
 	 * @param value2 The second binary value
-	 * @return A binary variable with a value of the result from the multiply operation
+	 * @return A binary variable with a value of the result from the multiply
+	 *         operation
 	 */
 	public static Binary binaryMultiply(Binary value1, Binary value2) {
 		// set the Binary values to strings
 		String stringValue1 = value1.number;
 		String stringValue2 = value2.number;
-		
+
 		// convert the binary strings to integer values using Integer class
 		// and parseInt method with radix 2
 		int intValue1 = Integer.parseInt(stringValue1, 2);
 		int intValue2 = Integer.parseInt(stringValue2, 2);
-		
+
 		// create the result Binary value using Integer class
 		// methoid toBinaryString which converts an integer to binary string
 		// and return that result
 		Binary result = new Binary(Integer.toBinaryString(intValue1 * intValue2));
 		return result;
-    	}
+	}
 }
