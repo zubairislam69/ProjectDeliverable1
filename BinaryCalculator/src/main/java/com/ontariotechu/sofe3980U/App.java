@@ -101,6 +101,16 @@ public class App {
 
         Binary logicalAND3 = Binary.bitwiseLogicalAND(binary13, binary14);
         System.out.println("Their logical AND is " + logicalAND3.getValue());
+        
+        // MULTIPLICATION
+        Binary multBinary1 = new Binary("1010");
+        System.out.println("Binary multiplicand is " + multBinary1.getValue());
+
+        Binary multBianry2 = new Binary("0101");
+        System.out.println("Binary multiplier is " + multBianry2.getValue());
+
+        Binary product = Binary.binaryMultiply(multBinary1, multBianry2);
+        System.out.println("The product is " + product.getValue());
     }
 
 }
