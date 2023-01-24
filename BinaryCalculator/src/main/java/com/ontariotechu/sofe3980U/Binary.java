@@ -228,7 +228,7 @@ public class Binary {
 	 * @param value2 The second binary value
 	 * @return A binary variable with a value of the result from the multiply operation
 	 */
-	public static Binary BinaryMultiply(Binary value1, Binary value2) {
+	public static Binary binaryMultiply(Binary value1, Binary value2) {
 		// set the Binary values to strings
 		String stringValue1 = value1.number;
 		String stringValue2 = value2.number;
