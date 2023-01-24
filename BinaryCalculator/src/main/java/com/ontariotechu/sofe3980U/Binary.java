@@ -36,7 +36,7 @@ public class Binary {
 		this.number = number.substring(beg); // exclude the trailing zeros if any
 		// uncomment the following code
 
-		if (this.number == "") { // replace empty strings with a single zero
+		if ("".equals(this.number)) { // replace empty strings with a single zero
 			this.number = "0";
 		}
 
