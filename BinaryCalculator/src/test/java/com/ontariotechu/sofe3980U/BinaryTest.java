@@ -119,6 +119,98 @@ public class BinaryTest
 	assertTrue( binary3.getValue().equals("0"));
 	}
 
+     // OR TESTS
+	// Test the OR function with two binary numbers of the same length
+	@Test
+	public void or() {
+		Binary binary1 = new Binary("111000");
+		Binary binary2 = new Binary("100100");
+		Binary binary3 = Binary.bitwiseLogicalOR(binary1, binary2);
+		assertTrue(binary3.getValue().equals("111100"));
+	}
+
+	//Test The or functions with two binary numbers of different lengths 
+	@Test
+	public void or2() {
+		Binary binary1 = new Binary("1010");
+		Binary binary2 = new Binary("100100");
+		Binary binary3 = Binary.bitwiseLogicalOR(binary1, binary2);
+		assertTrue(binary3.getValue().equals("101110"));
+	}
+
+	// Test the or function with the same binary number
+	@Test
+	public void or3() {
+		Binary binary1 = new Binary("1011");
+		Binary binary2 = new Binary("1011");
+		Binary binary3 = Binary.bitwiseLogicalOR(binary1, binary2);
+		assertTrue(binary3.getValue().equals("1011"));
+	}
+
+	// Test the or function with a binary number and one
+	@Test
+	public void or4() {
+		Binary binary1 = new Binary("1001");
+		Binary binary2 = new Binary("0");
+		Binary binary3 = Binary.bitwiseLogicalOR(binary1, binary2);
+		assertTrue(binary3.getValue().equals("1001"));
+	}
+
+	// Test the or function with two zeroes
+	@Test
+	public void or5() {
+		Binary binary1 = new Binary("0");
+		Binary binary2 = new Binary("0");
+		Binary binary3 = Binary.bitwiseLogicalOR(binary1, binary2);
+		assertTrue(binary3.getValue().equals("0"));
+	}
+
+
+
+	//AND TESTS 
+	// Test the and function with two 4 digit binary numbers
+@Test
+	public void and() {
+		Binary binary1 = new Binary("0011");
+		Binary binary2 = new Binary("1010");
+		Binary binary3 = Binary.bitwiseLogicalAND(binary1, binary2);
+		assertTrue(binary3.getValue().equals("0010"));
+	}
+
+// Test the and function with the same binary number
+@Test
+	public void and2() {
+		Binary binary1 = new Binary("1111");
+		Binary binary2 = new Binary("1111");
+		Binary binary3 = Binary.bitwiseLogicalAND(binary1, binary2);
+		assertTrue(binary3.getValue().equals("1111"));
+	}
+
+// Test the and function with a binary number and one
+	public void and3() {
+		Binary binary1 = new Binary("1001");
+		Binary binary2 = new Binary("1");
+		Binary binary3 = Binary.bitwiseLogicalAND(binary1, binary2);
+		assertTrue(binary3.getValue().equals("0001"));
+	}
+
+// Test the and function with a binary number and zero
+	public void and4() {
+		Binary binary1 = new Binary("11111");
+		Binary binary2 = new Binary("0");
+		Binary binary3 = Binary.bitwiseLogicalAND(binary1, binary2);
+		assertTrue(binary3.getValue().equals("00000"));
+	}
+
+// Test the and function with two zeroes
+	public void and5() {
+		Binary binary1 = new Binary("0");
+		Binary binary2 = new Binary("0");
+		Binary binary3 = Binary.bitwiseLogicalAND(binary1, binary2);
+		assertTrue(binary3.getValue().equals("0"));
+	}
+
+	
 	// MULTIPLICATION TESTS
 	// Test the multiplication function with two 4 digit binary numbers
 	@Test
@@ -165,89 +257,6 @@ public class BinaryTest
 		assertTrue(binary3.getValue().equals("0"));
 	}
 
-	@Test 
-	public void Testcases() {
-		// First test function
-        Binary binary3 = new Binary("1010");
-        System.out.println("Third binary number is " + binary3.getValue());
-
-        Binary binary4 = new Binary("100100");
-        System.out.println("Fourth binary number is " + binary4.getValue());
-
-        Binary logicalOR1 = Binary.bitwiseLogicalOR(binary3, binary4);
-        System.out.println("Their logical OR is " + logicalOR1.getValue());
-
-        System.out.println("");
-
-        // Second test function
-        Binary binary5 = new Binary("101010");
-        System.out.println("Fifth binary number is " + binary5.getValue());
-
-        Binary binary6 = new Binary("110100");
-        System.out.println("Sixth binary number is " + binary6.getValue());
-
-        Binary logicalOR2 = Binary.bitwiseLogicalOR(binary5, binary6);
-        System.out.println("Their logical OR is " + logicalOR2.getValue());
-
-        System.out.println("");
-
-        // Third test function
-        Binary binary7 = new Binary("111000");
-        System.out.println("Third binary number is " + binary7.getValue());
-
-        Binary binary8 = new Binary("100100");
-        System.out.println("Fourth binary number is " + binary8.getValue());
-
-        Binary logicalOR3 = Binary.bitwiseLogicalOR(binary7, binary8);
-        System.out.println("Their logical OR is " + logicalOR3.getValue());
-
-        System.out.println("");
-
-        // BITWISE LOGICAL AND
-
-        // First test function
-        Binary binary9 = new Binary("10111");
-        System.out.println("Ninth binary number is " + binary9.getValue());
-
-        Binary binary10 = new Binary("10101011");
-        System.out.println("Tenth binary number is " + binary10.getValue());
-
-        Binary logicalAND1 = Binary.bitwiseLogicalAND(binary9, binary10);
-        System.out.println("Their logical AND is " + logicalAND1.getValue());
-
-        System.out.println("");
-
-        // Second test function
-        Binary binary11 = new Binary("0011");
-        System.out.println("Eleventh binary number is " + binary11.getValue());
-
-        Binary binary12 = new Binary("1010");
-        System.out.println("Twelth binary number is " + binary12.getValue());
-
-        Binary logicalAND2 = Binary.bitwiseLogicalAND(binary11, binary12);
-        System.out.println("Their logical AND is " + logicalAND2.getValue());
-
-        System.out.println("");
-
-        // Third test function
-        Binary binary13 = new Binary("11111");
-        System.out.println("Thirteenth binary number is " + binary13.getValue());
-
-        Binary binary14 = new Binary("0");
-        System.out.println("Fourteenth binary number is " + binary14.getValue());
-
-        Binary logicalAND3 = Binary.bitwiseLogicalAND(binary13, binary14);
-        System.out.println("Their logical AND is " + logicalAND3.getValue());
-        
-        // MULTIPLICATION
-        Binary multBinary1 = new Binary("1010");
-        System.out.println("Binary multiplicand is " + multBinary1.getValue());
-
-        Binary multBianry2 = new Binary("0101");
-        System.out.println("Binary multiplier is " + multBianry2.getValue());
-
-        Binary product = Binary.binaryMultiply(multBinary1, multBianry2);
-        System.out.println("The product is " + product.getValue());
-	}
+	
 	
 }
