@@ -126,7 +126,7 @@ public class BinaryTest
 		Binary binary1 = new Binary("1100");
 		Binary binary2 = new Binary("1001");
 		Binary binary3 = Binary.binaryMultiply(binary1, binary2);
-		assertTrue(binary3.getValue().equals("1101100");
+		assertTrue(binary3.getValue().equals("1101100"));
 	}
 			   
 	// Test the multiplication function with the same binary number
@@ -135,7 +135,7 @@ public class BinaryTest
 		Binary binary1 = new Binary("1000");
 		Binary binary2 = new Binary("1000");
 		Binary binary3 = Binary.binaryMultiply(binary1, binary2);
-		assertTrue(binary3.getValue().equals("1000000");
+		assertTrue(binary3.getValue().equals("1000000"));
 	}
 			   
 	// Test the multiplication function with a binary number and one
@@ -144,7 +144,7 @@ public class BinaryTest
 		Binary binary1 = new Binary("1000");
 		Binary binary2 = new Binary("1");
 		Binary binary3 = Binary.binaryMultiply(binary1, binary2);
-		assertTrue(binary3.getValue().equals("1000");
+		assertTrue(binary3.getValue().equals("1000"));
 	}
 	   
 	// Test the multiplication function with a binary number and zero
@@ -153,7 +153,7 @@ public class BinaryTest
 		Binary binary1 = new Binary("1000");
 		Binary binary2 = new Binary("0");
 		Binary binary3 = Binary.binaryMultiply(binary1, binary2);
-		assertTrue(binary3.getValue().equals("0");
+		assertTrue(binary3.getValue().equals("0"));
 	}
 	
 	// Test the multiplication function with two zeroes
@@ -162,6 +162,6 @@ public class BinaryTest
 		Binary binary1 = new Binary("0");
 		Binary binary2 = new Binary("0");
 		Binary binary3 = Binary.binaryMultiply(binary1, binary2);
-		assertTrue(binary3.getValue().equals("0");
+		assertTrue(binary3.getValue().equals("0"));
 	}
 }
