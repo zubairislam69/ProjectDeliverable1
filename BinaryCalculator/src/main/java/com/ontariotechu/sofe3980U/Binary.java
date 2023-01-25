@@ -194,11 +194,11 @@ public class Binary {
 			}
 		}
 
-		// empty variable to store result of logical OR
+		// empty variable to store result of logical AND
 		String ANDresult = "";
 
 		// for loop to loop through each bit of both
-		// binary values and perform logical OR
+		// binary values and perform logical AND
 		// for loop condition uses the highest binary value length
 		for (int i = 0; i < ((value1Length > value2Length) ? value1Length : value2Length); i++) {
 			// checks each bit of val 1
