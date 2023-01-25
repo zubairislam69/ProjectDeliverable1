@@ -185,22 +185,25 @@ public class BinaryTest {
 	}
 
 	// Test the and function with a binary number and one
+	@Test
 	public void and3() {
 		Binary binary1 = new Binary("1001");
 		Binary binary2 = new Binary("1");
 		Binary binary3 = Binary.bitwiseLogicalAND(binary1, binary2);
-		assertTrue(binary3.getValue().equals("0001"));
+		assertTrue(binary3.getValue().equals("1"));
 	}
 
 	// Test the and function with a binary number and zero
+	@Test
 	public void and4() {
 		Binary binary1 = new Binary("11111");
 		Binary binary2 = new Binary("0");
 		Binary binary3 = Binary.bitwiseLogicalAND(binary1, binary2);
-		assertTrue(binary3.getValue().equals("00000"));
+		assertTrue(binary3.getValue().equals("0"));
 	}
 
 	// Test the and function with two zeroes
+	@Test
 	public void and5() {
 		Binary binary1 = new Binary("0");
 		Binary binary2 = new Binary("0");
